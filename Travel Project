@@ -1,0 +1,28 @@
+ using System;
+
+namespace TravelSite
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the Travel Booking System!");
+
+            // Prompt user for destination
+            Console.Write("Enter your destination: ");
+            string destination = Console.ReadLine();
+
+            // Prompt user for travel date
+            Console.Write("Enter your travel date (MM/DD/YYYY): ");
+            DateTime travelDate;
+            while (!DateTime.TryParse(Console.ReadLine(), out travelDate))
+            {
+                Console.WriteLine("Invalid date format. Please enter the date in MM/DD/YYYY format.");
+                Console.Write("Enter your travel date: ");
+            }
+
+            // Display booking confirmation
+            Console.WriteLine($"Thank you for booking your trip to {destination} on {travelDate.ToShortDateString()}!");
+        }
+    }
+}
