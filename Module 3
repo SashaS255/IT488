@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Flight Travel App</title>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>FlightApp</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" role="button">Login/Sign Up</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Welcome to FlightApp</h2>
+                    <h3>Your gateway to seamless travel experiences</h3>
+                </hgroup>
+                <p>FlightApp simplifies your travel planning with a user-friendly interface, real-time flight updates, and personalized travel options. Start your journey with us today.</p>
+                <figure>
+                    <img src="https://source.unsplash.com/featured/?airplane,sky" alt="Flight in the sky" />
+                    <figcaption><a href="https://unsplash.com/s/photos/airplane-sky" target="_blank">Image via Unsplash</a></figcaption>
+                </figure>
+                <h3>Database Design</h3>
+                <p>Our app's database is structured to ensure efficient data management, focusing on security and speed. User accounts, flight bookings, and payment information are stored with encryption and privacy in mind.</p>
+                <h3>User Registration</h3>
+                <p>Join FlightApp today to unlock personalized travel experiences. Just provide your basic information to get started.</p>
+                <h3>Login</h3>
+                <p>Already a member? Log in to access your travel dashboard, manage bookings, and more.</p>
+            </section>
+        </div>
+    </main>
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h2>Get Started</h2>
+                    <h3>Join us or Log in</h3>
+                </hgroup>
+                <form class="grid">
+                    <input type="text" id="firstname" name="firstname" placeholder="Full Name" aria-label="Full Name" required />
+                    <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
+                    <button type="submit" onclick="event.preventDefault()">Sign Up / Log In</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <footer class="container">
+        <small>
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+        </small>
+    </footer>
+</body>
+</html>
