@@ -1,0 +1,32 @@
+from flask import Flask, request
+
+app = Flask(__name__)
+
+# Mock database to store user bookings
+bookings = []
+
+# Endpoint to process payment using a payment gateway
+@app.route('/process_payment', methods=['POST'])
+def process_payment():
+    data = request.json
+    # Process payment using payment gateway API
+    # Assuming the payment is successful, add booking to database
+    booking = {
+        'user_id': data['user_id'],
+        'flight_id': data['flight_id'],
+        'amount_paid': data['amount_paid']
+    }
+    bookings.append(booking)
+    return {'message': 'Payment processed successfully'}
+
+# Endpoint to configure email notification service
+@app.route('/configure_email', methods=['POST'])
+def configure_email():
+    data = request.json
+    # Configure email notification service based on provided data
+    # For example, set up SMTP server and send test email
+    # Email configuration code here...
+    return {'message': 'Email notification service configured successfully'}
+
+if __name__ == '__main__':
+    app.run(debug=True)
